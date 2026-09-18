@@ -1,0 +1,773 @@
+<!doctype html>
+<html class="no-js agntix-light" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Our Portfolio - MikroMedia Digital Agency</title>
+    <meta name="description" content="Explore previous works, projects, and case studies delivered by MikroMedia across web solutions, AI, automation, and digital marketing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/atropos.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .ar-hero-area {
+            background-color: #0E0F11 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .tp-service-5-text p {
+            color: #b0b0b0 !important;
+            font-size: 16px !important;
+            line-height: 1.8 !important;
+            font-family: var(--tp-ff-body) !important;
+        }
+        .portfolio-sec {
+            background-color: #0E0F11 !important;
+            padding: 80px 0 100px;
+            position: relative;
+            z-index: 1;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        @media (max-width: 991px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        .portfolio-card {
+            background: #18191B !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            position: relative !important;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            text-decoration: none !important;
+            display: flex !important;
+            flex-direction: column !important;
+            cursor: pointer !important;
+            opacity: 0; /* Animated by GSAP on load */
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px) !important;
+            border-color: #FFF669 !important;
+            box-shadow: 0 20px 45px rgba(255, 246, 105, 0.15) !important;
+        }
+        .portfolio-img-box {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+        }
+        .portfolio-img-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            transition: background 0.4s ease;
+            z-index: 1;
+        }
+        .portfolio-card:hover .portfolio-img-box::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.08) rotate(0.5deg);
+        }
+        .portfolio-card-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 246, 105, 0.15) !important;
+            border: 1px solid rgba(255, 246, 105, 0.3) !important;
+            color: #FFF669 !important;
+            padding: 5px 14px !important;
+            border-radius: 30px !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            z-index: 10;
+            letter-spacing: 0.05em !important;
+        }
+        .portfolio-card-content {
+            padding: 35px 30px !important;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .portfolio-client-name {
+            font-family: var(--tp-ff-platform) !important;
+            font-size: 28px !important;
+            font-weight: 600 !important;
+            color: #ffffff !important;
+            margin-bottom: 12px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .portfolio-client-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FFF669;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .portfolio-card:hover .portfolio-client-name::after {
+            transform: scaleX(1);
+        }
+        .portfolio-client-name svg {
+            transition: transform 0.3s ease !important;
+            color: #FFF669 !important;
+        }
+        .portfolio-card:hover .portfolio-client-name {
+            color: #FFF669 !important;
+        }
+        .portfolio-card:hover .portfolio-client-name svg {
+            transform: translate(6px, -6px) rotate(45deg);
+        }
+        .portfolio-card-desc {
+            font-family: var(--tp-ff-body) !important;
+            font-size: 15px !important;
+            color: #b0b0b0 !important;
+            line-height: 1.6 !important;
+            margin-bottom: 25px !important;
+        }
+        .portfolio-subtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .portfolio-subtag {
+            font-size: 11px !important;
+            color: #e0e0e0 !important;
+            background: rgba(255, 255, 255, 0.06) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            padding: 4px 10px !important;
+            border-radius: 4px !important;
+            text-transform: uppercase !important;
+            font-weight: 600 !important;
+        }
+    </style>
+</head>
+
+<body class="tp-magic-cursor">
+
+    <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-bg-yellow">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-2-area p-relative offcanvas-2-white-bg">
+        <div class="tp-offcanvas-2-bg is-left left-box"></div>
+        <div class="tp-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
+        <div class="tp-offcanvas-2-wrapper">
+            <div class="tp-offcanvas-2-left left-box">
+                <div class="tp-offcanvas-2-left-wrap d-flex justify-content-between align-items-center">
+                    <div class="tp-offcanvas-2-logo">
+                        <a href="index.html">
+                            <img class="logo-1" data-width="140" src="assets/img/logo/logo-white.png" alt="">
+                            <img class="logo-2" data-width="140" src="assets/img/logo/logo-black.png" alt="">
+                        </a>
+                    </div>
+                    <div class="tp-offcanvas-2-close d-md-none text-end">
+                        <button class="tp-offcanvas-2-close-btn">
+                            <span class="text">
+                                <span>close</span>
+                            </span>
+                            <span class="d-inline-block">
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32.621" height="1.00918"
+                                            transform="matrix(0.704882 0.709325 -0.704882 0.709325 1.0061 0)"
+                                            fill="currentcolor"></rect>
+                                        <rect width="32.621" height="1.00918"
+                                            transform="matrix(0.704882 -0.709325 0.704882 0.709325 0 23.2842)"
+                                            fill="currentcolor"></rect>
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tp-offcanvas-menu counter-row">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="active"><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="tp-offcanvas-2-right right-box d-none d-md-block p-relative">
+                <div class="tp-offcanvas-2-close text-end">
+                    <button class="tp-offcanvas-2-close-btn">
+                        <span class="text"><span>close</span></span>
+                        <span class="d-inline-block">
+                            <span>
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.80859 9.80762L28.1934 28.1924" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M9.80859 28.1924L28.1934 9.80761" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="tp-offcanvas-2-right-info-box mt-160">
+                    <h4 class="tp-offcanvas-2-right-info-title">Get In Touch</h4>
+
+                    <div class="tp-offcanvas-2-right-info-item">
+                        <label class="mb-10">Email</label>
+                        <a class="tp-line-white" href="mailto:contact@mikromedia.dev">contact@mikromedia.dev</a>
+                    </div>
+                    <div class="tp-offcanvas-2-right-info-item">
+                        <label class="mb-10">Address</label>
+                        <a class="tp-line-white" href="https://www.google.com/maps/" target="_blank">
+                            Sco-233 HUDA market sector 65 Faridabad
+                        </a>
+                    </div>
+                    <div class="tp-offcanvas-2-right-info-item">
+                        <label class="mb-15">Follow us</label>
+                        <div class="tp-offcanvas-2-right-social">
+                            <a href="https://www.linkedin.com/company/mikromedia01/?viewAsMember=true" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/mikromedia.dev/?hl=en" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/people/MikroMedia/61578098201457/" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay"></div>
+    <!-- offcanvas end -->
+
+    <!-- header area start -->
+    <div id="header-sticky" class="tp-header-area tp-header-inner-style tp-header-ptb tp-header-blur sticky-white-bg header-transparent mt-30 @@class">
+        <div class="container container-1750">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-6 col-6">
+                    <div class="tp-header-logo">
+                        <a href="index.html">
+                            <img data-width="120" class="logo-white" src="assets/img/logo/logo-white.png" alt="">
+                            <img data-width="120" class="logo-black d-none" src="assets/img/logo/logo-black.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 d-none d-xl-block">
+                    <div class="tp-header-box text-center">
+                        <div class="tp-header-menu tp-header-dropdown dropdown-white-bg">
+                            <nav class="tp-mobile-menu-active">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li class="is-active">
+                                        <a href="portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html">Pricing</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="services.html">Services</a>
+                                        <ul class="tp-submenu submenu">
+                                            <li><a href="services.html">All Services</a></li>
+                                            <li><a href="web-mobile-development.html">Web & Mobile Development</a></li>
+                                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
+                                            <li><a href="business-automation.html">Business Automation</a></li>
+                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-6">
+                    <div class="tp-header-right text-end">
+                        <div class="tp-header-14-bar-wrap ml-20">
+                            <button class="tp-header-8-bar tp-offcanvas-open-btn">
+                                <span>Menu</span>
+                                <span>
+                                    <svg width="24" height="8" viewBox="0 0 24 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0H14V1.5H0V0Z" fill="currentcolor" />
+                                        <path d="M0 6H24V7.5H0V6Z" fill="currentcolor" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <!-- Hero section start -->
+                <div class="ar-hero-area p-relative pt-190 pb-100 include-bg" data-background="assets/img/blog/blog-masonry/blog-bradcum-bg.png">
+                    <div class="tp-career-shape-1">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" fill="none">
+                                <path d="M36.3761 0.5993C40.3065 8.98556 47.3237 34.898 32.8824 44.3691C25.3614 49.0997 9.4871 52.826 1.7513 31.3747C-1.16691 23.2826 5.38982 15.9009 20.5227 20.0332C29.2536 22.4173 50.3517 27.8744 60.9 44.2751C66.4672 52.9311 71.833 71.0287 69.4175 82.9721M69.4175 82.9721C70.1596 77.2054 74.079 66.0171 83.8204 67.3978M69.4175 82.9721C69.8033 79.1875 67.076 70.1737 53.0797 64.3958M49.1371 20.8349C52.611 22.1801 63.742 28.4916 67.9921 39.9344" stroke="#fff" stroke-width="1.5" />
+                            </svg></span>
+                    </div>
+                    <div class="container container-1230">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-12">
+                                <div class="ar-hero-title-box service-5-heading mb-80">
+                                    <div class="ar-about-us-4-title-box shape-color d-flex align-items-center mb-20" style="opacity: 0;">
+                                        <span class="tp-section-subtitle pre" style="color: #FFF669 !important;">Our Portfolio</span>
+                                        <div class="ar-about-us-4-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="81" height="9" viewBox="0 0 81 9" fill="none">
+                                                <rect y="4" width="80" height="1" fill="#fff" />
+                                                <path d="M77 7.96366L80.5 4.48183L77 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="tp-career-title" style="opacity: 0; color: #ffffff !important; font-weight: 800 !important;">Selected Work</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8">
+                                <div class="tp-service-5-text" style="opacity: 0;">
+                                    <p>Discover how we help premium businesses scale and automate operations. Our works span custom software engineering, cloud architecture, AI solutions, web platforms, and results-focused growth marketing campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero section end -->
+
+                <!-- Portfolio section start -->
+                <section class="portfolio-sec">
+                    <div class="container container-1430">
+                        <div class="portfolio-grid">
+                            <!-- Oracle Case Study -->
+                            <div class="portfolio-card" data-cursor="Oracle">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">SOFTWARE & CLOUD</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-6.jpg" alt="Oracle Solutions" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Oracle
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Engineered secure, high-performance web dashboards and internal operations portals. Migrated outdated interfaces into modern React-based systems connected to global cloud APIs.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">Cloud Migration</span>
+                                        <span class="portfolio-subtag">Enterprise Software</span>
+                                        <span class="portfolio-subtag">React Dashboards</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Goldman Sachs Case Study -->
+                            <div class="portfolio-card" data-cursor="Goldman<br>Sachs">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">AI SOLUTIONS</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-7.jpg" alt="Goldman Sachs AI Solutions" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Goldman Sachs
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Deployed automated risk reporting systems powered by fine-tuned Large Language Models. Integrated custom parsing agents to process global market news and yield real-time analysis reports.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">AI Analytics</span>
+                                        <span class="portfolio-subtag">LLM Fine-tuning</span>
+                                        <span class="portfolio-subtag">Risk Management</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- JP Morgan Case Study -->
+                            <div class="portfolio-card" data-cursor="JP<br>Morgan">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">WEB & MOBILE</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-8.jpg" alt="JP Morgan Web Solutions" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        JP Morgan
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Redesigned the user experience and interface architecture for their wealth advisory mobile platform. Developed high-fidelity interactive prototypes ensuring absolute WCAG compliance.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">UI/UX Architecture</span>
+                                        <span class="portfolio-subtag">Mobile Apps</span>
+                                        <span class="portfolio-subtag">Responsive Portal</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wills Education Case Study -->
+                            <div class="portfolio-card" data-cursor="Wills<br>Edu">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">BUSINESS AUTOMATION</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-9.jpg" alt="Wills Education Systems" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Wills Education
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Designed an end-to-end student enrollment automation pipeline. Connected web portals, CRM databases, automated email marketing, and payment nodes into a singular dashboard.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">CRM Integration</span>
+                                        <span class="portfolio-subtag">Email Funnels</span>
+                                        <span class="portfolio-subtag">EdTech Portals</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Berlyn School Case Study -->
+                            <div class="portfolio-card" data-cursor="Berlyn">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">DIGITAL MARKETING</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-10.jpg" alt="Berlyn School Brand" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Berlyn School
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Executed a full digital rebrand, including visual assets generation, combined with a highly targeted Local SEO campaign that yielded a 140% boost in online admission queries.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">Brand Identity</span>
+                                        <span class="portfolio-subtag">Local SEO</span>
+                                        <span class="portfolio-subtag">Asset Creation</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Growth Skool Case Study -->
+                            <div class="portfolio-card" data-cursor="Growth<br>Skool">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">GROWTH MARKETING</span>
+                                    <img src="assets/img/project-slider-img/cr-slider-1.jpg" alt="Growth Skool Strategy" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Growth Skool
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Constructed conversion-optimized landing pages and customized lead magnets, paired with a multi-channel paid ads funnel on Meta and LinkedIn, driving up course registrations.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">Lead Funnels</span>
+                                        <span class="portfolio-subtag">Paid Ads Funnels</span>
+                                        <span class="portfolio-subtag">CRO Optimization</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Amgen Case Study -->
+                            <div class="portfolio-card" data-cursor="Amgen">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">DIGITAL HEALTHCARE</span>
+                                    <img src="assets/img/home-11/project/project-1.jpg" alt="Amgen Data Platforms" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        Amgen
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Designed and engineered high-throughput data pipelines and visualization dashboards for drug discovery and clinical trials. Enabled real-time telemetry analysis and compliance automation.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">Data Infrastructure</span>
+                                        <span class="portfolio-subtag">Bioinformatics</span>
+                                        <span class="portfolio-subtag">Compliance</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BHP Group Case Study -->
+                            <div class="portfolio-card" data-cursor="BHP<br>Group">
+                                <div class="portfolio-img-box">
+                                    <span class="portfolio-card-tag">ENTERPRISE AUTOMATION</span>
+                                    <img src="assets/img/home-11/project/project-2.jpg" alt="BHP Group Operations" class="portfolio-img">
+                                </div>
+                                <div class="portfolio-card-content">
+                                    <div class="portfolio-client-name">
+                                        BHP Group
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="portfolio-card-desc">Created an enterprise-wide IoT analytics dashboard to track telematics for thousands of heavy machinery assets globally. Streamlined maintenance predictions and optimized routing logistics.</p>
+                                    <div class="portfolio-subtags">
+                                        <span class="portfolio-subtag">IoT Visualization</span>
+                                        <span class="portfolio-subtag">Operations Analytics</span>
+                                        <span class="portfolio-subtag">Supply Chain</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Portfolio section end -->
+            </main>
+
+            <footer>
+                <!-- footer area start -->
+                <div class="pp-footer-area pp-footer-ptb">
+                    <div class="container container-1750">
+                        <div class="pp-footer-box">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="pp-footer-wrapper text-center">
+                                        <span class="pp-footer-subtitle">Ready to transform your business?</span>
+                                        <h4 class="pp-footer-title not-hide-cursor" data-cursor="Send<br>Mail" style="font-size: 2.5rem; line-height: 1.2;">
+                                            <a class="codetext cursor-hide" href="mailto:contact@mikromedia.dev">contact@mikromedia.dev</a>
+                                        </h4>
+                                        <div class="pp-footer-btn-box d-flex justify-content-center z-index-1">
+                                            <div>
+                                                <a class="pp-footer-btn mr-15" href="contact.html">Contact Us
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M1 1H11V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a class="pp-footer-btn" href="services.html">Our Services
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M1 1H11V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer area end -->
+
+                <!-- footer copyright area start -->
+                <div class="pp-footer-copyright-area pp-footer-copyright-ptb">
+                    <div class="container container-1430">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="pp-footer-copyright-wrap">
+                                    <div class="pp-footer-copyright-text">
+                                        <p>© 2025 all rights reserved</p>
+                                    </div>
+                                    <div class="pp-footer-copyright-text-center">
+                                        <p>Transforming businesses through digital innovation</p>
+                                    </div>
+                                    <div class="pp-footer-copyright-text">
+                                        <p>Made by MikroMedia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer copyright area end -->
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="config.js"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/three.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/scroll-magic.js"></script>
+    <script src="assets/js/hover-effect.umd.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/parallax-slider.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/Observer.min.js"></script>
+    <script src="assets/js/splitting.min.js"></script>
+    <script src="assets/js/webgl.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/atropos.js"></script>
+    <script src="assets/js/slider-active.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+    <script src="assets/js/tp-cursor.js"></script>
+
+    <script type="module" src="assets/js/distortion-img.js"></script>
+    <script type="module" src="assets/js/skew-slider/index.js"></script>
+    <script type="module" src="assets/js/img-revel/index.js"></script>
+
+    <!-- Custom ScrollTrigger reveal script -->
+    <script>
+        $(window).on('load', function() {
+            setTimeout(function() {
+                if (typeof gsap !== 'undefined') {
+                    // Force display hero block immediately
+                    $(".ar-about-us-4-title-box").css("opacity", "1");
+                    $(".tp-career-title").css("opacity", "1");
+                    $(".tp-service-5-text").css("opacity", "1");
+
+                    // Fade in animations
+                    gsap.fromTo(".ar-about-us-4-title-box", 
+                        { opacity: 0, y: -20 },
+                        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+                    );
+                    gsap.fromTo(".tp-career-title", 
+                        { opacity: 0, y: 30 },
+                        { opacity: 1, y: 0, duration: 0.8, delay: 0.15, ease: "power2.out" }
+                    );
+                    gsap.fromTo(".tp-service-5-text", 
+                        { opacity: 0, y: 20 },
+                        { opacity: 1, y: 0, duration: 0.8, delay: 0.3, ease: "power2.out" }
+                    );
+
+                    // Card reveal ScrollTrigger
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        gsap.registerPlugin(ScrollTrigger);
+                        
+                        gsap.utils.toArray(".portfolio-card").forEach(function (card) {
+                            gsap.fromTo(card, 
+                                {
+                                    opacity: 0,
+                                    y: 50
+                                },
+                                {
+                                    opacity: 1,
+                                    y: 0,
+                                    duration: 0.8,
+                                    ease: "power2.out",
+                                    scrollTrigger: {
+                                        trigger: card,
+                                        start: "top 90%",
+                                        toggleActions: "play none none none"
+                                    }
+                                }
+                            );
+                        });
+                    } else {
+                        $(".portfolio-card").css("opacity", "1");
+                    }
+                } else {
+                    $(".ar-about-us-4-title-box, .tp-career-title, .tp-service-5-text, .portfolio-card").css("opacity", "1");
+                }
+            }, 100);
+        });
+    </script>
+
+</body>
+
+</html>

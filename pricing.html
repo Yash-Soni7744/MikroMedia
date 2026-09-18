@@ -1,0 +1,968 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MikroMedia - Pricing Plans</title>
+    <meta name="description" content="Choose the perfect plan for your business growth.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/atropos.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .pricing-list li {
+            margin-bottom: 12px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-list li svg {
+            width: 18px;
+            height: 18px;
+            color: #1a9f53;
+            flex-shrink: 0;
+        }
+
+        /* MOVED TO AFTER .pricing-card-wrap for proper cascading */
+
+        .pricing-card-wrap {
+            padding: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            height: 100%;
+            transition: .3s;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card-wrap:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Specific override for Gold Plan - Placed last to win specificity */
+        .pricing-card-wrap.custom-active-bg {
+            background: #0E0F11;
+            color: #ffffff;
+            border: 1px solid #FFF669;
+        }
+
+        .pricing-card-wrap.custom-active-bg h3,
+        .pricing-card-wrap.custom-active-bg span,
+        .pricing-card-wrap.custom-active-bg li,
+        .pricing-card-wrap.custom-active-bg p {
+            color: #ffffff !important;
+        }
+
+        .pricing-card-wrap.custom-active-bg .pricing-btn {
+            background: #FFF669;
+            color: #0E0F11 !important;
+            border-color: #FFF669;
+        }
+
+        .pricing-card-wrap.custom-active-bg li svg {
+            color: #FFF669;
+        }
+
+        .tp-btn-link {
+            font-weight: 500;
+            font-size: 14px;
+            color: #0E0F11;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tp-btn-link:hover {
+            color: #1a9f53;
+        }
+    </style>
+</head>
+
+<body class="tp-magic-cursor" data-bg-color="#fff">
+
+    <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-bg-red-2">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
+    <!-- header area start -->
+    <div id="header-sticky"
+        class="tp-header-area tp-header-inner-style tp-header-ptb tp-header-blur sticky-white-bg header-transparent mt-30">
+        <div class="container container-1750">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-6 col-6">
+                    <div class="tp-header-logo">
+                        <a href="index.html">
+                            <img data-width="120" class="logo-white" src="assets/img/logo/logo-black.png" alt="">
+                            <img data-width="120" class="logo-black d-none" src="assets/img/logo/logo-black.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 d-none d-xl-block">
+                    <div class="tp-header-box text-center">
+                        <div class="tp-header-menu tp-header-dropdown dropdown-white-bg">
+                            <nav class="tp-mobile-menu-active">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="active">Pricing</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="services.html">Services</a>
+                                        <ul class="tp-submenu submenu">
+                                            <li><a href="services.html">All Services</a></li>
+                                            <li><a href="web-mobile-development.html">Web & Mobile Development</a></li>
+                                            <li><a href="branding-creative-design.html">Branding & Creative Design</a>
+                                            </li>
+                                            <li><a href="business-automation.html">Business Automation</a></li>
+                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-6">
+                    <div class="tp-header-right text-end">
+                        <div class="tp-header-14-bar-wrap ml-20">
+                            <button class="tp-header-8-bar tp-offcanvas-open-btn">
+                                <span>Menu</span>
+                                <span>
+                                    <svg width="24" height="8" viewBox="0 0 24 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0H14V1.5H0V0Z" fill="currentcolor" />
+                                        <path d="M0 6H24V7.5H0V6Z" fill="currentcolor" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+
+    <!-- tp-offcanvus-area-start -->
+    <div class="tp-offcanvas-area">
+        <div class="tp-offcanvas-wrapper">
+            <div class="tp-offcanvas-top d-flex align-items-center justify-content-between">
+                <div class="tp-offcanvas-logo">
+                    <a href="index.html">
+                        <img class="logo-1" data-width="120" src="assets/img/logo/logo-black.png" alt="">
+                        <img class="logo-2" data-width="120" src="assets/img/logo/logo-white.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close">
+                    <button class="tp-offcanvas-close-btn">
+                        <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="tp-offcanvas-main">
+                <div class="tp-offcanvas-content d-none d-xl-block">
+                    <h3 class="tp-offcanvas-title">Hello There!</h3>
+                    <p>We are MikroMedia, a digital agency focused on business automation and creative solutions.</p>
+                </div>
+                <div class="tp-offcanvas-menu d-xl-none">
+                    <nav></nav>
+                </div>
+                <div class="tp-offcanvas-contact">
+                    <h3 class="tp-offcanvas-title sm">Get In Touch</h3>
+                    <ul>
+                        <li><a href="mailto:contact@mikromedia.dev">contact@mikromedia.dev</a></li>
+                        <li><a href="https://www.google.com/maps/" target="_blank">Sco-233 HUDA market sector 65
+                                Faridabad</a></li>
+                    </ul>
+                </div>
+                <div class="tp-offcanvas-social">
+                    <h3 class="tp-offcanvas-title sm">Follow Us</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/company/mikromedia01/?viewAsMember=true" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/mikromedia.dev/?hl=en" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/people/MikroMedia/61578098201457/" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-overlay"></div>
+    <!-- tp-offcanvus-area-end -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <main>
+
+                <!-- hero area start -->
+                <div class="ar-hero-area pp-service-2 p-relative pb-45"
+                    data-background="assets/img/about-us/about-us-4/about-us-4-bg.png">
+                    <div class="tp-career-shape-1">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84"
+                                fill="none">
+                                <path
+                                    d="M36.3761 0.5993C40.3065 8.98556 47.3237 34.898 32.8824 44.3691C25.3614 49.0997 9.4871 52.826 1.7513 31.3747C-1.16691 23.2826 5.38982 15.9009 20.5227 20.0332C29.2536 22.4173 50.3517 27.8744 60.9 44.2751C66.4672 52.9311 71.833 71.0287 69.4175 82.9721M69.4175 82.9721C70.1596 77.2054 74.079 66.0171 83.8204 67.3978M69.4175 82.9721C69.8033 79.1875 67.076 70.1737 53.0797 64.3958M49.1371 20.8349C52.611 22.1801 63.742 28.4916 67.9921 39.9344"
+                                    stroke="#030303" stroke-width="1.5" />
+                            </svg></span>
+                    </div>
+                    <div class="ar-about-us-4-shape">
+                        <!-- Standard shape -->
+                    </div>
+                    <div class="container container-1830">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-12">
+                                <div class="pp-service-2-title-box">
+                                    <h3 class="ar-about-us-4-title tp-char-animation">Plans & <br>
+                                        Pricing</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- hero area end -->
+
+                <!-- banner area start -->
+                <div class="pp-service-2-banner-area p-relative">
+                    <div class="pp-service-2-banner-top">
+                        <div class="container container-1830">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="pp-service-2-banner-text">
+                                        <p>Flexible Solutions</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="pp-service-2-banner-text text-lg-center">
+                                        <p>Transparent Pricing</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="pp-service-2-banner-text smooth text-lg-end">
+                                        <a href="#pricing">Scroll Down <span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                    <path d="M7 1V13" stroke="#111013" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M13 7L7 13L1 7" stroke="#111013" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ar-banner-wrap pp-service-2-hight">
+                        <img class="w-100" src="assets/img/service/service-2/service-2-thumb.jpg" alt=""
+                            data-speed=".8">
+                    </div>
+                </div>
+                <!-- banner area end -->
+
+                <!-- Pricing Area -->
+                <div id="pricing" class="pricing-area pt-120 pb-120">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center mb-60">
+                                <span class="tp-section-subtitle pre">Our Packages</span>
+                                <h2 class="tp-section-title">Choose the right plan for you</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <!-- Bronze -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                                <div class="pricing-card-wrap">
+                                    <div class="mb-30">
+                                        <span
+                                            class="d-inline-block px-3 py-1 rounded-pill bg-light text-dark fw-bold mb-3"
+                                            style="font-size: 12px;">BRONZE</span>
+                                        <h3 class="fw-bold mb-1">₹25k<span
+                                                class="fs-6 fw-normal text-muted">/project</span></h3>
+                                        <p class="text-muted mt-2" style="font-size: 14px;">Perfect for establishing a
+                                            professional online presence.</p>
+                                    </div>
+
+                                    <ul class="pricing-list list-unstyled mb-40">
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            5-Page Responsive Website
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Basic On-Page SEO Setup
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Contact Form & Map Integration
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Social Media & WhatsApp Links
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Mobile & Tablet Optimization
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Fast Loading Speed (Core Web Vitals)
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            1 Professional Email ID Setup
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            1 Month Free Support & Maintenance
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="contact.html" class="tp-btn-black"
+                                            style="width: 100%; border-radius: 30px;">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Silver -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                                <div class="pricing-card-wrap">
+                                    <div class="mb-30">
+                                        <span
+                                            class="d-inline-block px-3 py-1 rounded-pill bg-light text-dark fw-bold mb-3"
+                                            style="font-size: 12px;">SILVER</span>
+                                        <h3 class="fw-bold mb-1">₹50k<span
+                                                class="fs-6 fw-normal text-muted">/project</span></h3>
+                                        <p class="text-muted mt-2" style="font-size: 14px;">Scale your business with
+                                            enhanced visibility and engagement.</p>
+                                    </div>
+
+                                    <ul class="pricing-list list-unstyled mb-40">
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <strong>Everything in Bronze</strong>
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            One Page React JS App
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Advanced SEO & Analytics Setup
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Social Media Marketing (3 Platforms)
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Content Writing (5 Pages + 3 Blogs)
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Pop-up / Lead Gen Forms
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Newsletter Subscription Integration
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Speed Optimization & Compression
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="contact.html" class="tp-btn-black"
+                                            style="width: 100%; border-radius: 30px;">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gold (Active) -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                                <div class="pricing-card-wrap custom-active-bg">
+                                    <div class="mb-30">
+                                        <span class="d-inline-block px-3 py-1 rounded-pill fw-bold mb-3"
+                                            style="font-size: 12px; background: rgba(255,255,255,0.1); color: #FFF669;">GOLD
+                                            - MOST POPULAR</span>
+                                        <h3 class="fw-bold mb-1">₹75k<span class="fs-6 fw-normal"
+                                                style="opacity: 0.7;">/project</span></h3>
+                                        <p class="mt-2" style="font-size: 14px; opacity: 0.8;">Robust solutions for
+                                            high-traffic and sales-driven businesses.</p>
+                                    </div>
+
+                                    <ul class="pricing-list list-unstyled mb-40">
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <strong>Everything in Silver</strong>
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            React JS Web Application
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Full E-commerce (Cart & Checkout)
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Paid Ads Management (1 Month)
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Business Automation Setup
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Auto-Reply Chatbot Integration
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Custom Graphics & Icons Design
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Competitor Analysis Report
+                                        </li>
+                                        <li>
+                                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            3 Months Priority Support
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="contact.html" class="tp-btn-black pricing-btn"
+                                            style="width: 100%; border-radius: 30px; background: #FFF669; color: #000; border: none;">Get
+                                            Started</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Custom -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+                                <div class="pricing-card-wrap"
+                                    style="background: radial-gradient(circle at top right, #333, #000); color: #fff; border: none;">
+                                    <div class="mb-30">
+                                        <span class="d-inline-block px-3 py-1 rounded-pill fw-bold mb-3"
+                                            style="font-size: 12px; background: rgba(255,255,255,0.1); color: #FFF669;">ENTERPRISE</span>
+                                        <h3 class="fw-bold mb-1 text-white">Custom<span class="fs-6 fw-normal"
+                                                style="opacity: 0.7;">/quote</span></h3>
+                                        <p class="mt-2" style="font-size: 14px; opacity: 0.8;">Bespoke technology stacks
+                                            designed for your specific needs.</p>
+                                    </div>
+
+                                    <ul class="pricing-list list-unstyled mb-40">
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <strong>Full-Scale AI Automation</strong>
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Custom SaaS Development
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Dedicated Account Manager
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Cloud Infrastructure (AWS/Azure)
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Custom API Integrations
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Enterprise Security & DDoS Protection
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            Unlimited Design Revisions
+                                        </li>
+                                        <li class="text-white">
+                                            <svg fill="currentColor" viewBox="0 0 20 20" style="color: #FFF669;">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            24/7 Dedicated Tech Team
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="contact.html" class="tp-btn-black pricing-btn"
+                                            style="width: 100%; border-radius: 30px; background: #FFF669; color: #000; border: none;">Contact
+                                            Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Individual Service Plans -->
+                <div class="individual-pricing-area pb-120">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center mb-60">
+                                <span class="tp-section-subtitle pre">A La Carte Services</span>
+                                <h2 class="tp-section-title">Individual Service Pricing</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <!-- Website Pricing -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">Website Development</h4>
+                                    <h3 class="fw-bold mb-30">₹35k - ₹2.5L</h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>Custom React JS Development</li>
+                                        <li>Single Page Applications (SPA)</li>
+                                        <li>Corporate Websites</li>
+                                        <li>Landing Pages</li>
+                                        <li>E-commerce Portals (MERN Stack)</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Get a Quote <svg width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                            <!-- SEO Pricing -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">SEO Optimization</h4>
+                                    <h3 class="fw-bold mb-30">₹25k<span class="fs-6 fw-normal text-muted">/month</span>
+                                    </h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>In-depth Keyword Research</li>
+                                        <li>On-Page & Off-Page Optimization</li>
+                                        <li>Technical SEO Audit</li>
+                                        <li>Content Strategy & Optimization</li>
+                                        <li>Monthly Performance Reports</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Start Ranking <svg width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                            <!-- SMM / SMO Pricing -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">Social Media (SMM/SMO)</h4>
+                                    <h3 class="fw-bold mb-30">₹40k<span class="fs-6 fw-normal text-muted">/month</span>
+                                    </h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>Daily Post Creation & Scheduling</li>
+                                        <li>Community Management</li>
+                                        <li>Paid Ad Campaign Management</li>
+                                        <li>Influencer Outreach</li>
+                                        <li>Brand Awareness Strategy</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Boost Engagement <svg width="14"
+                                            height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                            <!-- Web Automation -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">Web Automation</h4>
+                                    <h3 class="fw-bold mb-30">₹50k<span class="fs-6 fw-normal text-muted">/setup</span>
+                                    </h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>Automated Data Scraping</li>
+                                        <li>Workflow Automation (Zapier/Make)</li>
+                                        <li>Report Generation</li>
+                                        <li>CRM Integrations</li>
+                                        <li>Custom Scripting</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Automate Now <svg width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                            <!-- AI Automation -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">AI Automation</h4>
+                                    <h3 class="fw-bold mb-30">Custom Quote</h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>Custom AI Model Training</li>
+                                        <li>Predictive Analysis Tools</li>
+                                        <li>Natural Language Processing</li>
+                                        <li>Image/Video Generation Pipelines</li>
+                                        <li>AI-Driven Business Intelligence</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Explore AI <svg width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                            <!-- Chatbot Pricing -->
+                            <div class="col-xl-4 col-lg-6 mb-30">
+                                <div class="pricing-card-wrap h-100">
+                                    <h4 class="mb-20">AI Chatbots</h4>
+                                    <h3 class="fw-bold mb-30">₹30k<span class="fs-6 fw-normal text-muted">/bot</span>
+                                    </h3>
+                                    <ul class="pricing-list list-unstyled mb-30">
+                                        <li>24/7 Customer Support Bot</li>
+                                        <li>Lead Generation & Qualification</li>
+                                        <li>Multi-Platform (WhatsApp, Web, FB)</li>
+                                        <li>Custom Knowledge Base</li>
+                                        <li>Human Handoff Integration</li>
+                                    </ul>
+                                    <a href="contact.html" class="tp-btn-link">Build Chatbot <svg width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path d="M1 7H13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <div class="tp-footer-area pt-160 pb-35">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="tp-footer-widget tp-footer-col-1 pb-40">
+                                <h4 class="tp-footer-widget-title">
+                                    Helping <br>
+                                    start-ups scale &amp; grow.
+                                </h4>
+                                <div class="tp-footer-widget-social">
+                                    <a href="https://www.linkedin.com/company/mikromedia01/?viewAsMember=true"
+                                        target="_blank">
+                                        <span>
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path
+                                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                                <rect x="2" y="9" width="4" height="12" />
+                                                <circle cx="4" cy="4" r="2" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <a href="https://www.instagram.com/mikromedia.dev/?hl=en" target="_blank">
+                                        <span>
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <a href="https://www.facebook.com/people/MikroMedia/61578098201457/"
+                                        target="_blank">
+                                        <span>
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path
+                                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-4 col-md-6">
+                            <div class="tp-footer-widget tp-footer-col-2 pb-40">
+                                <h4 class="tp-footer-widget-title-sm pre mb-25">
+                                    Quick links
+                                </h4>
+                                <div class="tp-footer-widget-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="portfolio.html">Portfolio</a></li>
+                                        <li><a href="pricing.html">Pricing</a></li>
+                                        <li><a href="services.html">All Services</a></li>
+                                        <li><a href="web-mobile-development.html">Web Development</a></li>
+                                        <li><a href="branding-creative-design.html">Branding</a></li>
+                                        <li><a href="business-automation.html">Automation</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="config.js"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/three.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/scroll-magic.js"></script>
+    <script src="assets/js/hover-effect.umd.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/parallax-slider.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/Observer.min.js"></script>
+    <script src="assets/js/splitting.min.js"></script>
+    <script src="assets/js/webgl.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/atropos.js"></script>
+    <script src="assets/js/slider-active.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+    <script src="assets/js/tp-cursor.js"></script>
+
+    <script type="module" src="assets/js/distortion-img.js"></script>
+    <script type="module" src="assets/js/skew-slider/index.js"></script>
+    <script type="module" src="assets/js/img-revel/index.js"></script>
+</body>
+
+</html>
